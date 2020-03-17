@@ -15,13 +15,13 @@ const UsernameWrapper = styled.h3({
   color: "#0984e3"
 });
 
-function UserInfo(props) {
+let UserInfo = props => {
   return (
     <UserInfoWrapper>
       <UsernameWrapper>{props.user.name}</UsernameWrapper>
       <Avatar user={props.user} />
     </UserInfoWrapper>
   );
-}
+};
 
 export default UserInfo;
