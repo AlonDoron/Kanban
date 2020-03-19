@@ -24,9 +24,9 @@ const AvatarWrapper = styled.div({
 let UserInfo = props => {
   return (
     <UserInfoWrapper>
-      <UsernameWrapper>{props.user.name}</UsernameWrapper>
+      <UsernameWrapper>{props.name}</UsernameWrapper>
       <AvatarWrapper>
-        <Avatar user={props.user} />
+        <Avatar avatarImg={props.avatarUrl} authorName={props.authorName} />
       </AvatarWrapper>
     </UserInfoWrapper>
   );

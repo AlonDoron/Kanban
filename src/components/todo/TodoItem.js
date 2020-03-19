@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { UserInfo } from "../common";
 
-const ItemWrapper = styled.div({
+const ItemWrapper = styled.li({
   border: "1px solid #0984e3",
   display: "inline-block",
   maxWidth: "25%"
@@ -20,7 +20,7 @@ let TodoItem = props => {
     <ItemWrapper>
       <header>
         <TitleWrapper>{props.title}</TitleWrapper>
-        <UserInfo user={props.user} />
+        <UserInfo {...props} />
       </header>
       <section>{props.content}</section>
     </ItemWrapper>

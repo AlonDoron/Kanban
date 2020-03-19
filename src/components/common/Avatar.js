@@ -8,7 +8,7 @@ const ImgWrapper = styled.img({
 });
 
 let Avatar = props => {
-  return <ImgWrapper src={props.user.avatarUrl} alt={props.user.authorName} />;
+  return <ImgWrapper src={props.avatarImg} alt={props.authorName} />;
 };
 
 export default Avatar;
