@@ -4,22 +4,30 @@ import { Avatar } from "./";
 
 const UserInfoWrapper = styled.div({
   display: "inline-flex",
-  flexDirection: "row",
-  border: "1px solid #0984e3"
+  flexDirection: "row"
 });
 
-const UsernameWrapper = styled.h3({
+const UsernameWrapper = styled.h4({
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
   color: "#0984e3"
 });
 
+const AvatarWrapper = styled.div({
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  marginLeft: "10px"
+});
+
 let UserInfo = props => {
   return (
     <UserInfoWrapper>
       <UsernameWrapper>{props.user.name}</UsernameWrapper>
-      <Avatar user={props.user} />
+      <AvatarWrapper>
+        <Avatar user={props.user} />
+      </AvatarWrapper>
     </UserInfoWrapper>
   );
 };
