@@ -4,7 +4,8 @@ import { Avatar } from "./";
 
 const UserInfoWrapper = styled.div({
   display: "inline-flex",
-  flexDirection: "row"
+  flexDirection: "row",
+  flexWrap: "wrap"
 });
 
 const UsernameWrapper = styled.h4({
@@ -24,7 +25,7 @@ const AvatarWrapper = styled.div({
 let UserInfo = props => {
   return (
     <UserInfoWrapper>
-      <UsernameWrapper>{props.name}</UsernameWrapper>
+      <UsernameWrapper>{props.authorName}</UsernameWrapper>
       <AvatarWrapper>
         <Avatar avatarImg={props.avatarUrl} authorName={props.authorName} />
       </AvatarWrapper>

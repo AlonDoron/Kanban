@@ -4,15 +4,18 @@ import { UserInfo } from "../common";
 
 const ItemWrapper = styled.li({
   border: "1px solid #0984e3",
-  display: "inline-block",
-  maxWidth: "25%"
+  maxWidth: "50%"
 });
 
 const TitleWrapper = styled.h3({
   color: "#00cec9",
-  display: "flex",
-  flexDirection: "row",
   marginBottom: "0px"
+});
+
+const ContentWrapper = styled.p({
+  overflowWrap: "break-word",
+  wordWrap: "break-word",
+  hyphens: "auto"
 });
 
 let TodoItem = props => {
@@ -22,7 +25,7 @@ let TodoItem = props => {
         <TitleWrapper>{props.title}</TitleWrapper>
         <UserInfo {...props} />
       </header>
-      <section>{props.content}</section>
+      <ContentWrapper>{props.content}</ContentWrapper>
     </ItemWrapper>
   );
 };
