@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import PropTypes from "prop-types";
 import { TodoItem } from "./";
 
 const TodoListWrapper = styled.div({
@@ -27,6 +28,11 @@ let TodoList = props => {
       <TodoItemsWrapper>{TodoItems}</TodoItemsWrapper>
     </TodoListWrapper>
   );
+};
+
+TodoList.propTypes = {
+  title: PropTypes.string,
+  todos: PropTypes.array
 };
 
 export default TodoList;

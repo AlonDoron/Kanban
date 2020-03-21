@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import PropTypes from "prop-types";
 import { UserInfo } from "../common";
 
 const ItemWrapper = styled.li({
@@ -32,6 +33,13 @@ let TodoItem = props => {
       <ContentWrapper>{props.content}</ContentWrapper>
     </ItemWrapper>
   );
+};
+
+TodoItem.propTypes = {
+  title: PropTypes.string,
+  content: PropTypes.string,
+  authorName: PropTypes.string,
+  avatarUrl: PropTypes.string
 };
 
 export default TodoItem;
