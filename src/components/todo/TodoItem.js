@@ -3,19 +3,23 @@ import styled from "styled-components";
 import { UserInfo } from "../common";
 
 const ItemWrapper = styled.li({
-  border: "1px solid #0984e3",
-  maxWidth: "50%"
+  border: "1px solid #b2bec3",
+  borderRadius: "5px",
+  listStyleType: "none",
+  margin: "10px",
+  padding: "10px"
 });
 
 const TitleWrapper = styled.h3({
   color: "#00cec9",
-  marginBottom: "0px"
+  marginBottom: "-15px"
 });
 
 const ContentWrapper = styled.p({
   overflowWrap: "break-word",
   wordWrap: "break-word",
-  hyphens: "auto"
+  hyphens: "auto",
+  margin: "0px"
 });
 
 let TodoItem = props => {
