@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import styled from "styled-components";
 
 const ImgWrapper = styled.img({
@@ -9,6 +10,11 @@ const ImgWrapper = styled.img({
 
 let Avatar = props => {
   return <ImgWrapper src={props.avatarImg} alt={props.authorName} />;
+};
+
+Avatar.propTypes = {
+  avatarImg: PropTypes.string,
+  authorName: PropTypes.string
 };
 
 export default Avatar;
