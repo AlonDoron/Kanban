@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { TodoList } from "../components/todo";
+import { todosApi } from "../components/api";
 
 let AppWrapper = styled.div({
   paddingTop: "20px",
@@ -20,12 +21,9 @@ let TodoPage = () => {
   });
 
   useEffect(() => {
-    fetch("http://localhost:3001/todos")
-      .then((response) => response.json())
-      .then((result) => {
-        console.log({ ...result });
-        setTodos({ ...result });
-      });
+    todosApi.getTodos().then((result) => {
+      setTodos({ ...result });
+    });
   }, []);
 
   return (
