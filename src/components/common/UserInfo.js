@@ -6,24 +6,24 @@ import { Avatar } from "./";
 const UserInfoWrapper = styled.div({
   display: "inline-flex",
   flexDirection: "row",
-  flexWrap: "wrap"
+  flexWrap: "wrap",
 });
 
 const UsernameWrapper = styled.h4({
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
-  color: "#0984e3"
+  color: "#89D8F3",
 });
 
 const AvatarWrapper = styled.div({
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
-  marginLeft: "10px"
+  marginLeft: "10px",
 });
 
-let UserInfo = props => {
+let UserInfo = (props) => {
   return (
     <UserInfoWrapper>
       <UsernameWrapper>{props.authorName}</UsernameWrapper>
@@ -36,7 +36,7 @@ let UserInfo = props => {
 
 UserInfo.propTypes = {
   authorName: PropTypes.string,
-  avatarUrl: PropTypes.string
+  avatarUrl: PropTypes.string,
 };
 
 export default UserInfo;

@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 import { TodoItem } from "./";
+import { Button } from "../common";
 
 const TodoListWrapper = styled.div({
   minWidth: "15%",
@@ -31,6 +32,7 @@ let TodoList = (props) => {
           <></>
         )}
       </TodoItemsWrapper>
+      <Button text="+" onButtonClick={() => console.log("HEY")} />
     </TodoListWrapper>
   );
 };

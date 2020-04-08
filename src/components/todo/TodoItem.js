@@ -8,22 +8,22 @@ const ItemWrapper = styled.li({
   borderRadius: "5px",
   listStyleType: "none",
   margin: "10px",
-  padding: "10px"
+  padding: "10px",
 });
 
 const TitleWrapper = styled.h3({
-  color: "#00cec9",
-  marginBottom: "-15px"
+  color: "#6fd0f1",
+  marginBottom: "-15px",
 });
 
 const ContentWrapper = styled.p({
   overflowWrap: "break-word",
   wordWrap: "break-word",
   hyphens: "auto",
-  margin: "0px"
+  margin: "0px",
 });
 
-let TodoItem = props => {
+let TodoItem = (props) => {
   return (
     <ItemWrapper>
       <header>
@@ -39,7 +39,7 @@ TodoItem.propTypes = {
   title: PropTypes.string,
   content: PropTypes.string,
   authorName: PropTypes.string,
-  avatarUrl: PropTypes.string
+  avatarUrl: PropTypes.string,
 };
 
 export default TodoItem;
