@@ -2,9 +2,10 @@ import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 import { UserInfo } from "../common";
+import { Colors } from "../misc";
 
 const ItemWrapper = styled.li({
-  border: "1px solid #b2bec3",
+  border: `1px solid ${Colors.border}`,
   borderRadius: "5px",
   listStyleType: "none",
   margin: "10px",
@@ -12,7 +13,7 @@ const ItemWrapper = styled.li({
 });
 
 const TitleWrapper = styled.h3({
-  color: "#6fd0f1",
+  color: Colors.title,
   marginBottom: "-15px",
 });
 

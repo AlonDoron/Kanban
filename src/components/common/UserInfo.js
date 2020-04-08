@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 import { Avatar } from "./";
+import { Colors } from "../misc";
 
 const UserInfoWrapper = styled.div({
   display: "inline-flex",
@@ -13,7 +14,7 @@ const UsernameWrapper = styled.h4({
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
-  color: "#89D8F3",
+  color: Colors.name,
 });
 
 const AvatarWrapper = styled.div({

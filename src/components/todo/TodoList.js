@@ -3,11 +3,12 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 import { TodoItem } from "./";
 import { Button } from "../common";
+import { Colors } from "../misc";
 
 const TodoListWrapper = styled.div({
   minWidth: "15%",
   maxWidth: "25%",
-  border: "1px solid #b2bec3",
+  border: `1px solid ${Colors.border}`,
   padding: "10px",
   marginTop: "20px",
   height: "100%",

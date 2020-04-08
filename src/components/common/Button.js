@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import PropTypes from "prop-types";
+import { Colors } from "../misc";
 
 let ButtonWrapper = styled.div({
   display: "flex",
@@ -7,23 +9,28 @@ let ButtonWrapper = styled.div({
   justifyItems: "center",
 });
 
-let Button2 = styled.button({
+let StyledButton = styled.button({
   width: "100%",
-  background: "#ffffff",
-  border: "1px solid #b2bec3",
+  background: Colors.background,
+  border: `1px solid ${Colors.border}`,
   borderRadius: "5px",
   margin: "0 10% 0 10%",
   "&:active": {
-    background: "#b2bec3",
+    background: Colors.border,
   },
 });
 
 let Button = (props) => {
   return (
     <ButtonWrapper>
-      <Button2 onClick={props.onButtonClick}>{props.text}</Button2>
+      <StyledButton onClick={props.onButtonClick}>{props.text}</StyledButton>
     </ButtonWrapper>
   );
+};
+
+Button.propTypes = {
+  onButtonClick: PropTypes.func,
+  text: PropTypes.string,
 };
 
 export default Button;
