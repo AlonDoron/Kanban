@@ -23,7 +23,9 @@ let StyledButton = styled.button({
 let Button = (props) => {
   return (
     <ButtonWrapper>
-      <StyledButton onClick={props.onButtonClick}>{props.text}</StyledButton>
+      <StyledButton onClick={() => props.onButtonClick()}>
+        {props.text}
+      </StyledButton>
     </ButtonWrapper>
   );
 };
