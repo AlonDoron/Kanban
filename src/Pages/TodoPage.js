@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { TodoList } from "../components/todo";
 import { todosApi } from "../components/api";
+import { Modal } from "../components/common";
 
 let AppWrapper = styled.div({
   paddingTop: "20px",
@@ -13,6 +14,11 @@ let AppWrapper = styled.div({
 });
 
 let TodoPage = () => {
+  const [modal, setModal] = useState({
+    isModalOpen: false,
+    title: "",
+  });
+
   const [todos, setTodos] = useState({
     todo: [],
     inProgress: [],
@@ -26,12 +32,29 @@ let TodoPage = () => {
     });
   }, []);
 
+  let handleOpenModal = (title) => {
+    setModal({ isModalOpen: true, title: title });
+  };
+
   return (
     <AppWrapper>
-      <TodoList todos={todos.todo} title="To Do" />
-      <TodoList todos={todos.inProgress} title="In Progress" />
-      <TodoList todos={todos.needReview} title="Need Review" />
-      <TodoList todos={todos.done} title="Done" />
+      <TodoList
+        todos={todos.todo}
+        title="To Do"
+        onOpenModal={handleOpenModal}
+      />
+      <TodoList
+        todos={todos.inProgress}
+        title="In Progress"
+        onOpenModal={handleOpenModal}
+      />
+      <TodoList
+        todos={todos.needReview}
+        title="Need Review"
+        onOpenModal={handleOpenModal}
+      />
+      <TodoList todos={todos.done} title="Done" onOpenModal={handleOpenModal} />
+      {modal.isModalOpen ? <Modal title={modal.title} /> : <></>}
     </AppWrapper>
   );
 };
