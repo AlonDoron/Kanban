@@ -4,7 +4,7 @@ import { TodoList } from "../components/todo";
 import { todosApi } from "../components/api";
 import { Modal } from "../components/common";
 
-let AppWrapper = styled.div({
+let TodoListsWrapper = styled.div({
   paddingTop: "20px",
   display: "flex",
   flexWrap: "wrap",
@@ -36,26 +36,41 @@ let TodoPage = () => {
     setModal({ isModalOpen: true, title: title });
   };
 
+  let handleCloseModal = () => {
+    setModal({ isModalOpen: false });
+  };
+
   return (
-    <AppWrapper>
-      <TodoList
-        todos={todos.todo}
-        title="To Do"
-        onOpenModal={handleOpenModal}
-      />
-      <TodoList
-        todos={todos.inProgress}
-        title="In Progress"
-        onOpenModal={handleOpenModal}
-      />
-      <TodoList
-        todos={todos.needReview}
-        title="Need Review"
-        onOpenModal={handleOpenModal}
-      />
-      <TodoList todos={todos.done} title="Done" onOpenModal={handleOpenModal} />
-      {modal.isModalOpen ? <Modal title={modal.title} /> : <></>}
-    </AppWrapper>
+    <div>
+      <TodoListsWrapper>
+        <TodoList
+          todos={todos.todo}
+          title="To Do"
+          onOpenModal={handleOpenModal}
+        />
+        <TodoList
+          todos={todos.inProgress}
+          title="In Progress"
+          onOpenModal={handleOpenModal}
+        />
+        <TodoList
+          todos={todos.needReview}
+          title="Need Review"
+          onOpenModal={handleOpenModal}
+        />
+        <TodoList
+          todos={todos.done}
+          title="Done"
+          onOpenModal={handleOpenModal}
+        />
+      </TodoListsWrapper>
+
+      {modal.isModalOpen ? (
+        <Modal title={modal.title} onCloseModal={handleCloseModal} />
+      ) : (
+        <></>
+      )}
+    </div>
   );
 };
 
