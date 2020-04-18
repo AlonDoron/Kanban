@@ -6,8 +6,9 @@ import { Button } from "../common";
 import { Colors } from "../misc";
 
 const TodoListWrapper = styled.div({
+  flex: 1,
   minWidth: "15%",
-  maxWidth: "25%",
+  maxWidth: "20%",
   border: `1px solid ${Colors.border}`,
   padding: "10px",
   marginTop: "20px",
@@ -15,6 +16,7 @@ const TodoListWrapper = styled.div({
 });
 
 const TodoTitleWrapper = styled.div({
+  flex: 1,
   textAlign: "center",
 });
 
