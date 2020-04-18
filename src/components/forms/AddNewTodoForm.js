@@ -3,10 +3,10 @@ import PropTypes from "prop-types";
 import { Input } from "../common/Inputs";
 import styled from "styled-components";
 
-const FormWrapper = styled.div({
-  display: "flex",
-  flexDirection: "column",
-});
+const FormWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
 
 let AddNewTodoForm = (props) => {
   const [formDetails, setFormDetails] = useState({

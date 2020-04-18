@@ -4,14 +4,14 @@ import { TodoList } from "../components/todo";
 import { todosApi } from "../components/api";
 import { Modal } from "../components/common";
 
-let TodoListsWrapper = styled.div({
-  paddingTop: "20px",
-  display: "flex",
-  flexWrap: "wrap",
-  justifyContent: "space-around",
-  alignItems: "stretch",
-  alignContent: "center",
-});
+let TodoListsWrapper = styled.div`
+  padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: stretch;
+  align-content: center;
+`;
 
 let TodoPage = () => {
   const [modal, setModal] = useState({

@@ -22,13 +22,13 @@ const modalStyle = {
   },
 };
 
-const TitleWrapper = styled.h3({
-  color: Colors.title,
-});
+const TitleWrapper = styled.h3`
+  color: ${Colors.title};
+`;
 
-const ButtonWrapper = styled.div({
-  alignSelf: "flex-end",
-});
+const ButtonWrapper = styled.div`
+  align-self: flex-end;
+`;
 
 let Modal = (props) => {
   return (

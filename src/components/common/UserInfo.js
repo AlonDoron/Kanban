@@ -4,25 +4,25 @@ import PropTypes from "prop-types";
 import { Avatar } from "./";
 import { Colors } from "../misc";
 
-const UserInfoWrapper = styled.div({
-  display: "inline-flex",
-  flexDirection: "row",
-  flexWrap: "wrap",
-});
+const UserInfoWrapper = styled.div`
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+`;
 
-const UsernameWrapper = styled.h4({
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "center",
-  color: Colors.name,
-});
+const UsernameWrapper = styled.h4`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: ${Colors.name};
+`;
 
-const AvatarWrapper = styled.div({
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "center",
-  marginLeft: "10px",
-});
+const AvatarWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 10px;
+`;
 
 let UserInfo = (props) => {
   return (

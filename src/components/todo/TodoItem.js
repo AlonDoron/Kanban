@@ -4,25 +4,25 @@ import PropTypes from "prop-types";
 import { UserInfo } from "../common";
 import { Colors } from "../misc";
 
-const ItemWrapper = styled.li({
-  border: `1px solid ${Colors.border}`,
-  borderRadius: "5px",
-  listStyleType: "none",
-  margin: "10px",
-  padding: "10px",
-});
+const ItemWrapper = styled.li`
+  border: 1px solid ${Colors.border};
+  border-radius: 5px;
+  list-style-type: none;
+  margin: 10px;
+  padding: 10px;
+`;
 
-const TitleWrapper = styled.h3({
-  color: Colors.title,
-  marginBottom: "-15px",
-});
+const TitleWrapper = styled.h3`
+  color: ${Colors.title};
+  margin-bottom: -15px;
+`;
 
-const ContentWrapper = styled.p({
-  overflowWrap: "break-word",
-  wordWrap: "break-word",
-  hyphens: "auto",
-  margin: "0px",
-});
+const ContentWrapper = styled.p`
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+  margin: 0px;
+`;
 
 let TodoItem = (props) => {
   return (

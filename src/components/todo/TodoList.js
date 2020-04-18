@@ -5,24 +5,24 @@ import { TodoItem } from "./";
 import { Button } from "../common";
 import { Colors } from "../misc";
 
-const TodoListWrapper = styled.div({
-  flex: 1,
-  minWidth: "15%",
-  maxWidth: "20%",
-  border: `1px solid ${Colors.border}`,
-  padding: "10px",
-  marginTop: "20px",
-  height: "100%",
-});
+const TodoListWrapper = styled.div`
+  flex: 1;
+  min-width: 15%;
+  max-width: 20%;
+  border: 1px solid ${Colors.border};
+  padding: 10px;
+  margin-top: 20px;
+  height: 100%;
+`;
 
-const TodoTitleWrapper = styled.div({
-  flex: 1,
-  textAlign: "center",
-});
+const TodoTitleWrapper = styled.div`
+  flex: 1;
+  text-align: center;
+`;
 
-const TodoItemsWrapper = styled.ul({
-  padding: "0",
-});
+const TodoItemsWrapper = styled.ul`
+  padding: 0;
+`;
 
 let TodoList = (props) => {
   return (
