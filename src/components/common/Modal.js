@@ -4,6 +4,7 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 import { Colors } from "../misc";
 import { Button } from "./";
+import { AddNewTodoForm } from "../forms";
 
 const ModalWrapper = styled.div({});
 
@@ -11,15 +12,17 @@ const modalStyle = {
   content: {
     display: "flex",
     flexDirection: "column",
-    alignItems: "flex-start",
-    left: "15%",
-    right: "15%",
-    width: "70%",
+    alignItems: "center",
+    border: `2px solid ${Colors.border}`,
+    borderRadius: "5px",
+    left: "25%",
+    right: "25%",
+    width: "50%",
+    height: "50%",
   },
 };
 
 const TitleWrapper = styled.h3({
-  alignSelf: "center",
   color: Colors.title,
 });
 
@@ -40,6 +43,7 @@ let Modal = (props) => {
           <Button onButtonClick={props.onCloseModal} text="X" />
         </ButtonWrapper>
         <TitleWrapper>Add New {props.title} Item</TitleWrapper>
+        <AddNewTodoForm />
       </ReactModal>
     </ModalWrapper>
   );
