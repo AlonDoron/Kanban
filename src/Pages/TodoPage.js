@@ -46,7 +46,8 @@ let TodoPage = () => {
     let setNewTodoKey = todos[name].length + 1;
     let newTodo = { ...values, key: setNewTodoKey };
 
-    if (newTodo.avatarUrl === undefined)
+    debugger;
+    if (newTodo.avatarUrl === undefined || newTodo.avatarUrl === "")
       newTodo.avatarUrl = Consts.DEFAULT_AVATAR_URL;
 
     tempTodos[name].push(newTodo);
