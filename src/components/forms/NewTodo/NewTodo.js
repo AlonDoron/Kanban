@@ -1,11 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Input } from "../common/Inputs";
-import { useForm } from "../utils";
-import { Button } from "../common";
-import { FormWrapper } from "./AddNewTodoForm.style";
+import { Input } from "../../common";
+import { useForm } from "../../utils";
+import { Button } from "../../common";
+import { FormWrapper } from "./NewTodo.style";
 
-let AddNewTodoForm = (props) => {
+let NewTodo = (props) => {
   const handleFormSubmit = () => {
     let formData = [];
     formData.push({ name: props.name, values });
@@ -57,9 +57,9 @@ let AddNewTodoForm = (props) => {
   );
 };
 
-export default AddNewTodoForm;
+export default NewTodo;
 
-AddNewTodoForm.propTypes = {
+NewTodo.propTypes = {
   name: PropTypes.string,
   submitForm: PropTypes.func,
   closeModal: PropTypes.func,
