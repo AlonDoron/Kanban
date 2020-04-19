@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import ReactModal from "react-modal";
 import styled from "styled-components";
 import PropTypes from "prop-types";
@@ -43,7 +43,11 @@ let Modal = (props) => {
           <Button onButtonClick={props.onCloseModal} text="X" />
         </ButtonWrapper>
         <TitleWrapper>Add New {props.title} Item</TitleWrapper>
-        <AddNewTodoForm />
+        <AddNewTodoForm
+          closeModal={props.onCloseModal}
+          submitForm={props.onSubmitModal}
+          name={props.name}
+        />
       </ReactModal>
     </ModalWrapper>
   );
@@ -51,7 +55,9 @@ let Modal = (props) => {
 
 Modal.propTypes = {
   title: PropTypes.string,
+  name: PropTypes.string,
   onCloseModal: PropTypes.func,
+  onSubmitModal: PropTypes.func,
 };
 
 export default Modal;
