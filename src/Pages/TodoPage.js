@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { TodoList } from "../components/todo";
-import { todosApi } from "../components/api";
+import { todosApi } from "../api";
 import { Modal } from "../components/common";
 import { Consts } from "../components/misc";
 import { TodoListsWrapper } from "./TodoPage.style";
