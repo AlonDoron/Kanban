@@ -1,17 +1,9 @@
 import React, { useState, useEffect } from "react";
-import styled from "styled-components";
 import { TodoList } from "../components/todo";
 import { todosApi } from "../components/api";
 import { Modal } from "../components/common";
 import { Consts } from "../components/misc";
-let TodoListsWrapper = styled.div`
-  padding-top: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: stretch;
-  align-content: center;
-`;
+import { TodoListsWrapper } from "./TodoPage.style";
 
 let TodoPage = () => {
   const [modal, setModal] = useState({

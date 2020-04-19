@@ -1,14 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Input } from "../common/Inputs";
-import styled from "styled-components";
 import { useForm } from "../utils";
 import { Button } from "../common";
-
-const FormWrapper = styled.form`
-  display: flex;
-  flex-direction: column;
-`;
+import { FormWrapper } from "./AddNewTodoForm.style";
 
 let AddNewTodoForm = (props) => {
   const handleFormSubmit = () => {
