@@ -23,15 +23,18 @@ let StyledButton = styled.button`
 let Button = (props) => {
   return (
     <ButtonWrapper>
-      <StyledButton onClick={() => props.onButtonClick()}>
-        {props.text}
-      </StyledButton>
+      {props.onButtonClick ? (
+        <StyledButton onClick={props.onButtonClick}>{props.text}</StyledButton>
+      ) : (
+        <StyledButton type={props.type}>{props.text}</StyledButton>
+      )}
     </ButtonWrapper>
   );
 };
 
 Button.propTypes = {
   onButtonClick: PropTypes.func,
+  type: PropTypes.string,
   text: PropTypes.string,
 };
 
