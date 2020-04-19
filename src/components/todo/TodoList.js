@@ -50,13 +50,19 @@ let TodoList = (props) => {
           <></>
         )}
       </TodoItemsWrapper>
-      <Button text="+" onButtonClick={() => props.onOpenModal(props.title)} />
+      <Button
+        text="+"
+        onButtonClick={() => {
+          props.onOpenModal({ name: props.name, title: props.title });
+        }}
+      />
     </TodoListWrapper>
   );
 };
 
 TodoList.propTypes = {
   title: PropTypes.string,
+  name: PropTypes.string,
   todos: PropTypes.array,
   onOpenModal: PropTypes.func,
 };
