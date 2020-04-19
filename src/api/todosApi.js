@@ -1,5 +1,5 @@
 import { handleResponse, handleError } from "./apiUtils";
-import { apiConfig } from "../../config";
+import { apiConfig } from "../config";
 
 const BASE_SERVER_URL = apiConfig.SERVER_URL;
 

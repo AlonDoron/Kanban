@@ -1,16 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Input } from "../common/Inputs";
-import styled from "styled-components";
-import { useForm } from "../utils";
-import { Button } from "../common";
+import { Input, Button } from "../../common";
+import { useForm } from "../../../hooks";
+import { FormWrapper } from "./NewTodo.style";
 
-const FormWrapper = styled.form`
-  display: flex;
-  flex-direction: column;
-`;
-
-let AddNewTodoForm = (props) => {
+let NewTodo = (props) => {
   const handleFormSubmit = () => {
     let formData = [];
     formData.push({ name: props.name, values });
@@ -62,9 +56,9 @@ let AddNewTodoForm = (props) => {
   );
 };
 
-export default AddNewTodoForm;
+export default NewTodo;
 
-AddNewTodoForm.propTypes = {
+NewTodo.propTypes = {
   name: PropTypes.string,
   submitForm: PropTypes.func,
   closeModal: PropTypes.func,

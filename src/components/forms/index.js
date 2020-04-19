@@ -1,1 +1,1 @@
-export { default as AddNewTodoForm } from "./AddNewTodoForm";
+export { default as NewTodo } from "./NewTodo/NewTodo";
