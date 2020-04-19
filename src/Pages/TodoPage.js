@@ -17,6 +17,7 @@ let TodoPage = () => {
   const [modal, setModal] = useState({
     isModalOpen: false,
     title: "",
+    name: "",
   });
 
   const [todos, setTodos] = useState({
@@ -32,12 +33,26 @@ let TodoPage = () => {
     });
   }, []);
 
-  let handleOpenModal = (title) => {
-    setModal({ isModalOpen: true, title: title });
+  let handleOpenModal = ({ name, title }) => {
+    setModal({ isModalOpen: true, title: title, name: name });
   };
 
   let handleCloseModal = () => {
-    setModal({ isModalOpen: false });
+    setModal({ isModalOpen: false, title: "", name: "" });
+  };
+
+  let handleSubmitModal = ({ name, values }) => {
+    let tempTodos = todos;
+    let setNewTodoKey = todos[name].length + 1;
+    let newTodo = { ...values, key: setNewTodoKey };
+
+    if (newTodo.avatarUrl === undefined)
+      newTodo.avatarUrl = "https://image.flaticon.com/icons/svg/747/747376.svg";
+
+    tempTodos[name].push(newTodo);
+
+    setTodos((todos) => ({ ...todos, tempTodos }));
+    handleCloseModal();
   };
 
   return (
@@ -46,27 +61,36 @@ let TodoPage = () => {
         <TodoList
           todos={todos.todo}
           title="To Do"
+          name="todo"
           onOpenModal={handleOpenModal}
         />
         <TodoList
           todos={todos.inProgress}
           title="In Progress"
+          name="inProgress"
           onOpenModal={handleOpenModal}
         />
         <TodoList
           todos={todos.needReview}
           title="Need Review"
+          name="needReview"
           onOpenModal={handleOpenModal}
         />
         <TodoList
           todos={todos.done}
           title="Done"
+          name="done"
           onOpenModal={handleOpenModal}
         />
       </TodoListsWrapper>
 
       {modal.isModalOpen ? (
-        <Modal title={modal.title} onCloseModal={handleCloseModal} />
+        <Modal
+          title={modal.title}
+          name={modal.name}
+          onCloseModal={handleCloseModal}
+          onSubmitModal={handleSubmitModal}
+        />
       ) : (
         <></>
       )}
