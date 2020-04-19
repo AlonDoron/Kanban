@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { TodoList } from "../components/todo";
 import { todosApi } from "../components/api";
 import { Modal } from "../components/common";
-
+import { Consts } from "../components/misc";
 let TodoListsWrapper = styled.div`
   padding-top: 20px;
   display: flex;
@@ -47,7 +47,7 @@ let TodoPage = () => {
     let newTodo = { ...values, key: setNewTodoKey };
 
     if (newTodo.avatarUrl === undefined)
-      newTodo.avatarUrl = "https://image.flaticon.com/icons/svg/747/747376.svg";
+      newTodo.avatarUrl = Consts.DEFAULT_AVATAR_URL;
 
     tempTodos[name].push(newTodo);
 
