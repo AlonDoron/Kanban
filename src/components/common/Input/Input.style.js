@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Colors } from "../../misc";
+import { Colors } from "../../../misc";
 
 export const InputWrapper = styled.div`
   display: flex;

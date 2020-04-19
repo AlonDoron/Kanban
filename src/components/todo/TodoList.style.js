@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Colors, ScreenSizes } from "../misc";
+import { Colors, ScreenSizes } from "../../misc";
 
 export const TodoListWrapper = styled.div`
   flex: 1;

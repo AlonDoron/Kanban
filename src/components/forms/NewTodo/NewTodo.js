@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Input, Button } from "../../common";
-import { useForm } from "../../../utils";
+import { useForm } from "../../../hooks";
 import { FormWrapper } from "./NewTodo.style";
 
 let NewTodo = (props) => {

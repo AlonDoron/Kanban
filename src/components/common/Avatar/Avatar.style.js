@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Colors } from "../../misc";
+import { Colors } from "../../../misc";
 
 export const ImgWrapper = styled.img`
   border-radius: 5px;
